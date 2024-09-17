@@ -9,7 +9,7 @@ export default function SectionHero() {
       </div>
 
       {/* description */}
-      <div className="desc">
+      <div className="desc ml-10">
         <h1 className="font-bold text-5xl">
           Achieve Your Global Dreams with Online Korean & English <br />
           Courses with <br />
@@ -18,7 +18,8 @@ export default function SectionHero() {
         <p className="my-9">
           {/* kurang maju, dipasin title */}
           Get a golden opportunity to get an overseas scholarship with thorough
-          preparation with our expert tutors. Open the gate to a bright future!
+          preparation with our expert tutors. <br />
+          Open the gate to a bright future!
         </p>
         {/* kurang lebarnya kesamping. dipasin jg sm title */}
         <button className="bg-[#2D446E] rounded-lg px-5 p-2 text-white">
