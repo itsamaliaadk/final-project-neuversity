@@ -8,11 +8,10 @@ export default function Home() {
   return (
     <div className="bg-[#F1FAFF]">
       {/* pemanggilan konten2 dari component */}
-    <SectionHero />
-    <CardChoose />
-    <CardMentors />
-    <CardTesti />
+      <SectionHero />
+      <CardChoose />
+      <CardMentors />
+      <CardTesti />
     </div>
   );
 }
-//

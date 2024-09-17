@@ -10,11 +10,11 @@ export default function SectionHero() {
 
       {/* description */}
       <div className="desc ml-10">
-        <h1 className="font-bold text-5xl">
+        <p className="font-bold text-5xl">
           Achieve Your Global Dreams with Online Korean & English <br />
           Courses with <br />
           Lingua
-        </h1>
+        </p>
         <p className="my-9">
           {/* kurang maju, dipasin title */}
           Get a golden opportunity to get an overseas scholarship with thorough
