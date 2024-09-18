@@ -3,7 +3,7 @@ import React from "react";
 export default function CardTesti() {
   return (
     <section>
-      <div className="container my-10">
+      <div className="container py-10">
         <h2 className="font-bold text-4xl text-center py-10">
           What Our Students Say
         </h2>
