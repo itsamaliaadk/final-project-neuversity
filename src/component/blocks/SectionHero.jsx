@@ -16,12 +16,11 @@ export default function SectionHero() {
           Lingua
         </p>
         <p className="my-9">
-          {/* kurang maju, dipasin title */}
           Get a golden opportunity to get an overseas scholarship with thorough
           preparation with our expert tutors. <br />
           Open the gate to a bright future!
         </p>
-        {/* kurang lebarnya kesamping. dipasin jg sm title */}
+
         <button className="bg-[#2D446E] rounded-lg px-5 p-2 text-white">
           Join Now
         </button>

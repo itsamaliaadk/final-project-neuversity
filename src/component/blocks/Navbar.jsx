@@ -16,10 +16,10 @@ export default function Navbar() {
 
         {/* menu navbar */}
         <div className="flex items-center gap-6">
-          <Link to={Home}>Home</Link>
-          <Link to={About}>About Us</Link>
-          <Link to={Program}>Program</Link>
-          <Link to={Contact}>Contact</Link>
+          <Link to={"/"}>Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/program">Program</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </nav>
