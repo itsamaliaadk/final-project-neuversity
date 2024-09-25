@@ -99,5 +99,3 @@ export default function Home() {
     </div>
   );
 }
-
-// BELUM DI COMMIT YG CARD

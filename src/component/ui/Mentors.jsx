@@ -1,5 +1,4 @@
 export default function Mentors({ image, name, univ, certificate, classes }) {
-  
   // styling
   return (
     <div className="border p-3 bg-white">
@@ -15,7 +14,10 @@ export default function Mentors({ image, name, univ, certificate, classes }) {
           // manggil bagian kelas (button)
           classes &&
             classes.map((item, index) => (
-              <button key={index} className="flex py-2 px-4 bg-[#222F49] mb-3 text-white">
+              <button
+                key={index}
+                className="flex py-2 px-4 bg-[#222F49] mb-3 text-white"
+              >
                 <img src="/star1.svg" alt="star1" />
                 {item}
               </button>
