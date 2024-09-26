@@ -1,6 +1,7 @@
 import React from "react";
+import Form from "../ui/Form";
 
-export default function Form() {
+export default function SectionContact() {
   return (
     <div className="container grid grid-cols-2 h-screen py-16">
       <div>
@@ -23,6 +24,7 @@ export default function Form() {
       </div>
 
       {/* form */}
+      <Form />
     </div>
   );
 }
