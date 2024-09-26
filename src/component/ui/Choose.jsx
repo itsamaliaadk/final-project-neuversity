@@ -1,40 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export default function Choose({ title, description }) {
-  // data
-  const data = [
-    {
-      title: "An Interesting Curiculum",
-      description:
-        "Korean and English language materials are arranged in an interesting way with international standards",
-    },
-    {
-      title: "1-on-1 with Mentor",
-      description:
-        "You will get 1 mentor who will focus on your needs and learning style, so you get the right and appropriate guidance",
-    },
-    {
-      title: "Flexibility of Time and Place",
-      description:
-        "Arrange your study schedule according to your busy schedule, and enjoy the flexibility of studying anytime and anywhere",
-    },
-    {
-      title: "Affordable Cost",
-      description:
-        "Lingua offers high-quality access to Korean & English courses at affordable and cost-effective prices",
-    },
-    {
-      title: "Experienced Mentor",
-      description:
-        "All mentors at Lingua are overseas scholarship recipients and have TOPIK & IELTS / TOEFL certificates",
-    },
-  ];
-
   return (
     // styling card
-    <div className="border bg-white p-20">
-      <p>{title ? title : "kosong"}</p>
-      <p>{description}</p>
+    <div className=" w-1/3 px-3 mb-8">
+      <div className="bg-white p-4 text-center h-full">
+        <p className="font-bold text-2xl py-3 w-2/3 mx-auto">{title}</p>
+        <p className="px-5">{description}</p>
+      </div>
     </div>
   );
 }

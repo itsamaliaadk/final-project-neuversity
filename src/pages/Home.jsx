@@ -6,6 +6,7 @@ import CardTesti from "../component/blocks/CardTesti";
 import Mentors from "../component/ui/Mentors";
 import Choose from "../component/ui/Choose";
 import Testi from "../component/ui/Testi";
+import SectionChoose from "../component/blocks/SectionChoose";
 
 export default function Home() {
   const data = [
@@ -58,18 +59,9 @@ export default function Home() {
       {/* pemanggilan konten2 dari component */}
       <SectionHero />
       <CardChoose />
-
-      <div className="mx-auto px-20 py-10 grid grid-cols-3 gap-5">
-        {data.map((item, index) => (
-          <Choose
-            key={index}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </div>
-
+      <SectionChoose />
       <CardMentors />
+
       {/* card mentors */}
       <div className="mx-auto px-20 py-10 grid grid-cols-3 gap-5">
         {data.map((item, index) => (
@@ -83,6 +75,7 @@ export default function Home() {
           />
         ))}
       </div>
+
       <CardTesti />
 
       <div className="mx-auto px-20 py-10 grid grid-cols-3 gap-5">
