@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Form() {
   return (
-    <form className="max-w-sm mx-auto">
+    <form className="max-w-sm mx-auto ">
       <div className="mb-5">
         <label
           htmlFor="fullname"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-black"
         >
           Fullname
         </label>
@@ -21,7 +21,7 @@ export default function Form() {
       <div className="mb-5">
         <label
           htmlFor="email"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-black"
         >
           Your email
         </label>
@@ -37,7 +37,7 @@ export default function Form() {
 
       <label
         htmlFor="message"
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block mb-2 text-sm font-medium text-black"
       >
         Your message
       </label>
@@ -51,11 +51,10 @@ export default function Form() {
 
       <button
         type="submit"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="text-white bg-[#2D446E] hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-5 justify-items-center"
       >
         Send
       </button>
     </form>
   );
 }
-feat: create sectionchoose component
