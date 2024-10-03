@@ -19,7 +19,7 @@ export default function SectionTesti() {
         "I am very happy to take an online English course here. The tutors are very experienced and patient in teaching. The learning materials are also interesting and easy to understand. Thanks to this course, my English skills have improved rapidly and I am now more confident in communicating with foreigners.",
     },
     {
-      foto: "/mentor2.jpg",
+      foto: "/mentor5.jpg",
       nama: "Cici L.",
       icons: "/star.svg",
       deskripsi:

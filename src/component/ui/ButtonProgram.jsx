@@ -16,11 +16,11 @@ export default function ButtonProgram(props) {
   } else if (props.type === "outline") {
     return (
       <button type="button" className={classOutline + " " + props.className}>
-        {props.children}
+        {props.children} Choose this
       </button>
     );
   }
 }
 
-// tulisan choose this gtw dimana
+// tulisan choose this gtw dimana / di card price
 // blm dipanggil, dipake
