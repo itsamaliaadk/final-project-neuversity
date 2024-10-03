@@ -5,7 +5,7 @@ export default function SectionTesti() {
   // data
   const data = [
     {
-      foto: "mentor2.jpg",
+      foto: "/mentor2.jpg",
       nama: "Meisy M.",
       icons: "/star.svg",
       deskripsi:
