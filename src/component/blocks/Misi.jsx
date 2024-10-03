@@ -8,7 +8,7 @@ export default function misi() {
 
         {/* icons banyak acak */}
 
-        <div className="container flex ">
+        <div className="container flex">
           <img src="/quote.svg" className="h-10 mt-2" alt="quote" />
           <p className="mt-5">
             At Lingua, our mission is to empower students with the knowledge and
@@ -17,7 +17,7 @@ export default function misi() {
             community where learners can thrive.
           </p>
 
-          <div className="relative">
+          <div>
             <img src="/english.svg" className="" alt="english" />
             <img src="/korean.svg" className="" alt="korean" />
             <img src="/teach.svg" className="" alt="teach" />

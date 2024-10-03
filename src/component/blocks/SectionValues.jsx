@@ -26,16 +26,17 @@ export default function SectionValues() {
   ];
 
   return (
-    <div className="grid grid-cols-2">
-      <div>
-        <p className="text-4xl">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
+      <div className="pr-36">
+        <p className="text-4xl font-bold text-center mt-44">
           OUR <br />
           CORE <br />
           VALUES
         </p>
       </div>
 
-      <div>
+      {/* kurang kekiri lg */}
+      <div className="grid grid-cols-2 gap-4 md:gap-8">
         {data.map((value, index) => (
           <Values
             key={index}
