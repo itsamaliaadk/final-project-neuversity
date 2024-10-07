@@ -9,6 +9,8 @@ import Contact from "./pages/Contact";
 import Navbar from "./component/blocks/Navbar";
 import Footer from "./component/blocks/Footer";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import AddMentor from "./pages/AddMentor";
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
         <Route path="/program" element={<Program />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/addmentor" element={<AddMentor />} />
       </Routes>
 
       {/* root footer */}

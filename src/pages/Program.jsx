@@ -102,7 +102,7 @@ export default function Program() {
 
   return (
     <div className="bg-[#F1FAFF]">
-      <p className="font-bold text-4xl text-center my-5">
+      <p className="font-bold text-4xl text-center py-5">
         Lingua Flagship
         <br /> Program
       </p>

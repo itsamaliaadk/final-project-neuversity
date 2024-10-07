@@ -74,7 +74,7 @@ export default function Form() {
 
         <button
           type="submit"
-          className="text-white bg-[#2D446E] hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-40 py-2.5 text-center mt-5"
+          className="text-white bg-[#2D446E] hover:bg-blue-400 font-medium rounded-lg text-sm w-full sm:w-auto px-40 py-2.5 text-center mt-5"
         >
           Send
         </button>
