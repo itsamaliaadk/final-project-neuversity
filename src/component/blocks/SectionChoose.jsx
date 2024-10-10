@@ -2,7 +2,6 @@ import React from "react";
 import Choose from "../ui/Choose";
 
 export default function SectionChoose() {
-  // data
   const data = [
     {
       title: "An Interesting Curiculum",
@@ -32,10 +31,18 @@ export default function SectionChoose() {
   ];
 
   return (
-    <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
-      {data.map((item, index) => (
-        <Choose key={index} title={item.title} description={item.description} />
-      ))}
-    </div>
+    <section>
+      <p className="font-bold text-4xl text-center py-10">Why Choose Lingua?</p>
+
+      <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
+        {data.map((item, index) => (
+          <Choose
+            key={index}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

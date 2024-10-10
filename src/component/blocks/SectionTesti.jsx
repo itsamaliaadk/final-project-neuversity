@@ -2,7 +2,6 @@ import React from "react";
 import Testi from "../ui/Testi";
 
 export default function SectionTesti() {
-  // data
   const data = [
     {
       foto: "/mentor2.jpg",
@@ -28,16 +27,22 @@ export default function SectionTesti() {
   ];
 
   return (
-    <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
-      {data.map((item, index) => (
-        <Testi
-          key={index}
-          foto={item.foto}
-          nama={item.name}
-          icons={item.icons}
-          deskripsi={item.deskripsi}
-        />
-      ))}
-    </div>
+    <section>
+      <p className="font-bold text-4xl text-center py-10">
+        What Our Students Say
+      </p>
+
+      <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
+        {data.map((item, index) => (
+          <Testi
+            key={index}
+            foto={item.foto}
+            nama={item.name}
+            icons={item.icons}
+            deskripsi={item.deskripsi}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
