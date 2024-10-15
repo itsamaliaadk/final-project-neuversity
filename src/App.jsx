@@ -15,22 +15,31 @@ import AddMentor from "./pages/AddMentor";
 export default function App() {
   return (
     <BrowserRouter>
-      {/* root navbar */}
+
       <Navbar />
 
       <Routes>
+        {/* Main Layout */}
+
+        {/* Admin Layout */}
+
         {/* root every pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/program" element={<Program />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addmentor" element={<AddMentor />} />
       </Routes>
 
-      {/* root footer */}
       <Footer />
     </BrowserRouter>
   );
 }
+
+// gapaham perubahan yg importnya kok bisa kayak gt
+// import MainLayout from "./components/MainLayout";
+// import AdminLayout from "./components/AdminLayout";
+
+// membuat halaman yg NO 4 CARA, BLM KRN BINGUNG YG MANA

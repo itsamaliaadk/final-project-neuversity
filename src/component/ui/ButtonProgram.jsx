@@ -16,7 +16,7 @@ export default function ButtonProgram(props) {
   } else if (props.type === "outline") {
     return (
       <button type="button" className={classOutline + " " + props.className}>
-        {props.children} Choose this
+        {props.children}
       </button>
     );
   }
@@ -24,3 +24,4 @@ export default function ButtonProgram(props) {
 
 // tulisan choose this gtw dimana / di card price
 // blm dipanggil, dipake
+// blm tau ini blm muncul pas dipake gt
