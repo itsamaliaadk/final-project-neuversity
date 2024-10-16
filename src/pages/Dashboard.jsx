@@ -1,6 +1,7 @@
 import React from "react";
 import NavDash from "../component/blocks/NavDash";
 import SectionMentors from "../component/blocks/SectionMentors";
+import ButtonEdit from "../component/ui/ButtonEdit";
 
 export default function Dashboard() {
   return (
@@ -11,9 +12,12 @@ export default function Dashboard() {
           <img src="add.svg" alt="add" />
           <p className="mt-1">Add Mentor</p>
         </div>
-        <div className=" container bg-[#222F49] w-full h-screen ">test
-          <SectionMentors />
+        <div className=" container bg-[#222F49] w-full h-screen ">
+        {/* <SectionMentors /> */}
+        <ButtonEdit />
         </div>
+
+        
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
 export default function Mentors({ image, name, univ, certificate, classes }) {
-  // styling
   return (
-    // tambahin style yg kalo di klik bisa jd bayangan
     <div className="w-80 px-5 mb-28 hover:scale-105 transition-transform duration-[0.3s]">
       <div className="border-blue-950 p-3 bg-white rounded-lg border-2 border-solid">
         <img src={image} alt="" />
@@ -10,9 +8,8 @@ export default function Mentors({ image, name, univ, certificate, classes }) {
         </p>
         <p className="w-1/4 mx-auto text-center">{univ}</p>
 
-        {/* design certificate */}
         <div className="flex justify-center gap-5">
-          <img src="sertf.svg" alt="" /> {certificate}
+          <img src="sertf.svg" alt="certificate" /> {certificate}
         </div>
 
         <div className="grid grid-cols-2 gap-3">
