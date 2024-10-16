@@ -3,7 +3,7 @@ import ButtonProgram from "./ButtonProgram";
 
 export default function Form() {
   return (
-    <section className="outline outline-blue-950 bg-white p-5 rounded-lg w-96 flex justify-end">
+    <section className="outline outline-blue-950 bg-white p-5 rounded-lg w-96 mx-auto">
       <form className="max-w-sm mx-auto ">
         <div className="mb-5">
           <label
@@ -51,8 +51,8 @@ export default function Form() {
             <option value="1A">Korean Class 1A</option>
             <option value="1B">Korean Class 1B</option>
             <option value="2A">Korean Class 2A</option>
-            <option value="TopI">TOPIK I Preparation Class</option>
-            <option value="TopII">TOPIK II Preparation Class</option>
+            <option value="topik1">TOPIK I Preparation Class</option>
+            <option value="topik2">TOPIK II Preparation Class</option>
             <option value="Eng">English Class</option>
           </select>
         </div>

@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/program" element={<Program />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addmentor" element={<AddMentor />} />
       </Routes>
@@ -43,3 +43,4 @@ export default function App() {
 // import AdminLayout from "./components/AdminLayout";
 
 // membuat halaman yg NO 4 CARA, BLM KRN BINGUNG YG MANA
+// LOGIN ERROR GTW
