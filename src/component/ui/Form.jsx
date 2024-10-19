@@ -3,7 +3,7 @@ import ButtonProgram from "./ButtonProgram";
 
 export default function Form() {
   return (
-    <section className="outline outline-blue-950 bg-white p-5 rounded-lg w-96 mx-auto">
+    <section className="outline outline-blue-950 bg-white p-5 rounded-lg w-full md:w-96 mx-auto">
       <form className="max-w-sm mx-auto ">
         <div className="mb-5">
           <label
@@ -81,7 +81,7 @@ export default function Form() {
         </button>
       </form>
 
-      <ButtonProgram />
+      {/* <ButtonProgram /> */}
     </section>
   );
 }

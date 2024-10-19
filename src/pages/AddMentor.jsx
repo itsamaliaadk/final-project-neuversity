@@ -10,7 +10,9 @@ export default function AddMentor() {
 
       <div className="container">
         <p className="font-bold text-4xl text-center">Add New Mentor</p>
-        <p className="text-center">Please fill in the details below to add a new mentor.</p>
+        <p className="text-center">
+          Please fill in the details below to add a new mentor.
+        </p>
       </div>
 
       <FormMentor />

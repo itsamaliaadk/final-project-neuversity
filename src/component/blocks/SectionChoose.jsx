@@ -34,7 +34,7 @@ export default function SectionChoose() {
     <section>
       <p className="font-bold text-4xl text-center py-10">Why Choose Lingua?</p>
 
-      <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
+      <div className="mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-wrap justify-center items-stretch">
         {data.map((item, index) => (
           <Choose
             key={index}

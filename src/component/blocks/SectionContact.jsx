@@ -3,7 +3,7 @@ import Form from "../ui/Form";
 
 export default function SectionContact() {
   return (
-    <div className="container grid grid-cols-2 h-screen py-16">
+    <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 h-auto py-16 px-5 md:px-16">
       <div>
         {/* sosmed + desc */}
         <p className="font-bold text-4xl">Let's Talk</p>

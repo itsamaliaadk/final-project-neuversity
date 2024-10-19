@@ -32,12 +32,12 @@ export default function SectionTesti() {
         What Our Students Say
       </p>
 
-      <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-stretch">
+      <div className="mx-auto px-20 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-wrap justify-center items-stretch">
         {data.map((item, index) => (
           <Testi
             key={index}
             foto={item.foto}
-            nama={item.name}
+            nama={item.nama}
             icons={item.icons}
             deskripsi={item.deskripsi}
           />
