@@ -7,9 +7,8 @@ export default function Hero2() {
         <p className="font-bold text-4xl">About Us</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 text-center flex items-center">
-        {/* description */}
-        <div className="order-2 md-order-2">
+      <div className="grid md:grid-cols-2 gap-10 text-center items-center">
+        <div className="order-1 md-order-2">
           <p className="text-start">
             We are an online Korean & English language course platform with
             extensive experience and passion in the world of language education.
@@ -21,8 +20,7 @@ export default function Hero2() {
           </p>
         </div>
 
-        {/* hero */}
-        <div className="order-1 md-order-1">
+        <div className="order-2 md-order-1">
           <img src="/hero-2.svg" alt="hero2" />
         </div>
       </div>
