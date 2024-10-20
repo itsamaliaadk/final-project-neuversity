@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Choose from "../ui/Choose";
 
 export default function SectionChoose() {
@@ -30,12 +30,18 @@ export default function SectionChoose() {
     },
   ];
 
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    <section>
+    <section className="container">
       <p className="font-bold text-4xl text-center py-10">Why Choose Lingua?</p>
 
-      <div className="mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-wrap justify-center items-stretch">
-        {data.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 py-10 justify-center">
+        {data.slice(0, isExpanded ? data.length : 4).map((item, index) => (
           <Choose
             key={index}
             title={item.title}
@@ -43,6 +49,13 @@ export default function SectionChoose() {
           />
         ))}
       </div>
+
+      <button
+        className="mt-4 text-blue-500 hover:underline"
+        onClick={handleToggle}
+      >
+        {isExpanded ? "Show Less" : "Show More"}
+      </button>
     </section>
   );
 }

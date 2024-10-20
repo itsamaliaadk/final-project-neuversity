@@ -10,7 +10,7 @@ export default function SectionHero() {
 
       {/* description */}
       <div className="desc ml-10 order-2 md:order-2">
-        <p className="font-bold text-5xl">
+        <p className="font-bold text-2xl lg:text-5xl">
           Achieve Your Global Dreams with Online Korean & English <br />
           Courses with <br />
           Lingua

@@ -6,9 +6,9 @@ export default function Mentors({ image, name, univ, certificate, classes }) {
         <p className="font-bold text-center text-2xl mb-2">
           {name ? name : "kosong"}
         </p>
-        <p className="w-1/4 mx-auto text-center">{univ}</p>
+        <p className="w-44 mx-auto text-center ">{univ}</p>
 
-        <div className="flex justify-center gap-5">
+        <div className="flex justify-center gap-3 my-5">
           <img src="sertf.svg" alt="certificate" /> {certificate}
         </div>
 
@@ -19,9 +19,9 @@ export default function Mentors({ image, name, univ, certificate, classes }) {
               classes.map((item, index) => (
                 <button
                   key={index}
-                  className="flex py-2 px-4 gap-2 bg-[#222F49] mb-3 text-white"
+                  className="flex justify-center items-center py-2 px-2 gap-1 bg-[#222F49]  text-white rounded-full w-full text-xs font-bold"
                 >
-                  <img src="/star1.svg" alt="star1" />
+                  <img src="/star1.svg" alt="star1" className="w-4 h-4" />
                   {item}
                 </button>
               ))

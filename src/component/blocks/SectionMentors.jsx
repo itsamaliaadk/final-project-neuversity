@@ -2,7 +2,7 @@ import React from "react";
 import Mentors from "../ui/Mentors";
 
 export default function SectionMentors() {
-  // data
+
   const data = [
     {
       image: "/mentor1.jpg",
@@ -14,7 +14,7 @@ export default function SectionMentors() {
     {
       image: "/mentor2.jpg",
       name: "Shita A.",
-      univ: "Awardee of GKS-U University Track Chonnam National University",
+      univ: "Awardee of GKS-U University Track Dong-A University",
       certificate: "TOPIK II Level 6",
       classes: ["Korean 1B", "Korean 2A"],
     },
@@ -49,10 +49,10 @@ export default function SectionMentors() {
   ];
 
   return (
-    <section>
+    <section className="container">
       <p className="font-bold text-4xl text-center py-10">Mentors at Lingua</p>
 
-      <div className="mx-auto px-20 py-10 flex flex-wrap justify-center items-center">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto  py-5  justify-center items-center font-medium text-sm">
         {data.map((item, index) => (
           <Mentors
             key={index}
@@ -67,6 +67,3 @@ export default function SectionMentors() {
     </section>
   );
 }
-
-//      {/* card mentors */}
-//      <div className="mx-auto px-20 py-10 grid grid-cols-3 gap-5">
