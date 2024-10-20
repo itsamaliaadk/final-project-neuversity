@@ -15,7 +15,9 @@ export default function AddMentor() {
         </p>
       </div>
 
-      <FormMentor />
+      <div className="py-10">
+        <FormMentor />
+      </div>
     </section>
   );
 }

@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useEffect("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,9 +22,10 @@ export default function LoginForm() {
       return;
     }
 
+    // ini hapus gtw ganti yg mana
     fetch("https://dummyjson.com/auth/login", {
       method: "POST",
-      headers: { "Content-Type": "applicantion/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: email,
         password: password,
@@ -32,9 +34,10 @@ export default function LoginForm() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console(data);
-        localStorage.setItem("token", data.token);
+        console.log(data);
+
         if (data.token) {
+          localStorage.setItem("token", data.token);
           Swal.fire({
             icon: "success",
             title: "Login Success",
@@ -45,68 +48,38 @@ export default function LoginForm() {
             navigate("/dashboard");
           });
         } else {
-          Swal.alert({
+          Swal.fire({
             icon: "error",
             title: "Login Failed",
             text: data.message,
           });
         }
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: "An error occurred, please try again.",
+        });
+        console.error("Login error:", error);
       });
   }
 
   return (
-    // <form className="max-w-sm mx-auto bg-white rounded-xl">
-    //   <div className="px-10 pt-10">
-    //     <label
-    //       htmlFor="email"
-    //       className="block mb-2 text-sm font-medium"
-    //     >
-    //       Email
-    //     </label>
-    //     <input
-    //       type="email"
-    //       id="email"
-    //       className="bg-white border border-gray-400 text-sm rounded-lg block w-full p-2.5"
-    //       required=""
-    //     />
-    //   </div>
-    //   <div className="px-10 pt-5 mb-10">
-    //     <label
-    //       htmlFor="password"
-    //       className="block mb-2 text-sm font-medium"
-    //     >
-    //       Password
-    //     </label>
-    //     <input
-    //       type="password"
-    //       id="password"
-    //       className="bg-white border border-gray-400 text-sm rounded-lg block w-full p-2.5"
-    //       required=""
-    //     />
-    //   </div>
-    //   <button
-    //     type="submit"
-    //     className="text-white bg-blue-950 hover:outline-8 font-medium rounded-lg text-sm w-fukk sm:w-auto px-32 py-2.5 text-center mx-10 mb-10"
-    //   >
-    //     Login
-    //   </button>
-    // </form>
-
-    // ---
-
     <form
       onSubmit={handleLogin}
-      className="bg-white rounded-xl border border-blue-900 space-y-4"
+      className="bg-white rounded-xl border border-blue-900 space-y-4 w-96 h-96"
     >
-      <p className="text-center text-2xl font-bold">Login</p>
-      <div className="flex flex-col">
+      <p className="text-center text-3xl font-bold mt-5">Login</p>
+
+      <div className="flex flex-col px-10 pt-3">
         <label htmlFor="email" className="block mb-2 text-sm font-medium">
           Email
         </label>
         <input
           type="email"
           className="bg-white border border-gray-400 text-sm rounded-lg block w-full p-2.5"
-          required=""
+          required
           id="email"
           onInput={(e) => {
             setEmail(e.target.value);
@@ -115,29 +88,38 @@ export default function LoginForm() {
         />
       </div>
 
-      <div className="flex flex-col">
-        <label htmlFor="password">Password</label>
+      <div className="flex flex-col px-10 pt-5">
+        <label htmlFor="password" className="block mb-2 text-sm font-medium">
+          Password
+        </label>
         <input
           type={showPassword ? "text" : "password"}
-          className="block mb-2 text-sm font-medium"
+          className="bg-white border border-gray-400 text-sm rounded-lg block w-full p-2.5"
+          required
           id="password"
           onInput={(e) => {
             setPassword(e.target.value);
           }}
           value={password}
         />
+        <div className="mt-2">
+          <label className="text-sm font-medium">
+            <input
+              type="checkbox"
+              onChange={() => setShowPassword(!showPassword)}
+              checked={showPassword}
+            />{" "}
+            Show Password
+          </label>
+        </div>
       </div>
 
       <button
         type="submit"
-        className="text-white bg-[#2D446E] hover:bg-blue-950 hover:outline-8 font-medium rounded-lg text-sm w-fukk sm:w-auto px-32 py-2.5 text-center mx-10 mb-10"
+        className="text-white bg-[#2D446E] hover:bg-blue-950 font-medium rounded-lg sm:w-auto px-32 py-2.5 text-center m-12"
       >
         Login
       </button>
     </form>
   );
 }
-
-// sweetalert2 blm bisa
-// trs ini mikir make email sm pass kita bkn dr dummy gmn, bsk tanya + dihapus
-// BLM ADA MUNCUL HASILNYA, ERROR

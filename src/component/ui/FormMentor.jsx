@@ -100,16 +100,16 @@ export default function FormMentor() {
           </select>
         </div>
 
-        <div className="mt-10 pb-3 flex items-center">
+        <div className="mt-10 pb-3 flex justify-center gap-10">
           <button
             type="reset"
-            className="outline outline-[#222F49] text-[#222F49] p-2 px-5 rounded-lg"
+            className="outline outline-[#222F49] text-[#222F49] p-2 px-10 rounded-lg"
           >
             Reset
           </button>
           <button
             type="submit"
-            className="bg-[#222F49] text-white p-2 px-5 mx-auto rounded-lg hover:bg-blue-900"
+            className="bg-[#222F49] text-white p-2 px-10 rounded-lg hover:bg-blue-900"
           >
             Submit
           </button>
