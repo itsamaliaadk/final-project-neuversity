@@ -103,7 +103,7 @@ export default function SectionPrice() {
   ];
 
   return (
-    <div>
+    <div className="p-5">
       {data.map((item, index) => (
         <Price
           key={index}

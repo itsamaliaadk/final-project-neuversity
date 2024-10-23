@@ -3,11 +3,11 @@ import React from "react";
 export default function Table({ data }) {
   return (
     <div className="container">
-      <table className="table-striped">
+      <table className="w-1/2 table-auto border-collapse text-left shadow-md rounded-lg my-5">
         <thead>
           <tr className="bg-[#1E2538] text-center text-white">
-            <th className="p-2">THE TH MEETING</th>
-            <th className="p-2">MATERIALS</th>
+            <th className="px-6 py-3 w-1/5">THE TH MEETING</th>
+            <th className="px-6 py-3">MATERIALS</th>
           </tr>
         </thead>
         <tbody>

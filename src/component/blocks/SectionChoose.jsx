@@ -38,7 +38,9 @@ export default function SectionChoose() {
 
   return (
     <section className="container mx-auto px-4">
-      <p className="font-bold text-4xl text-center py-10">Why Choose Lingua?</p>
+      <p className="font-bold text-4xl text-center py-10 ">
+        Why Choose Lingua?
+      </p>
 
       {/* Desktop Layout */}
       <div className="container hidden lg:grid lg:grid-cols-3 gap-6 py-10">
@@ -74,3 +76,6 @@ export default function SectionChoose() {
     </section>
   );
 }
+
+// animate__pulse
+// https://animate.style/#usage

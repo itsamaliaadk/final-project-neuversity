@@ -28,7 +28,7 @@ export default function SectionValues() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
       <div className="pr-36">
-        <p className="text-4xl font-bold text-center mt-44">
+        <p className="text-5xl font-bold text-center mt-44">
           OUR <br />
           CORE <br />
           VALUES

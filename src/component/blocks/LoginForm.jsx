@@ -9,6 +9,12 @@ export default function LoginForm() {
 
   const navigate = useNavigate();
 
+  // simulated user credentials
+  const mockUser = {
+    email: "amalia@gmail.com",
+    password: "marklee",
+  };
+
   function handleLogin(e) {
     e.preventDefault();
 
@@ -17,52 +23,30 @@ export default function LoginForm() {
         icon: "error",
         title: "Email and Password Required",
         text: "Email and Password cannot be empty",
-        confirmButtonColor: "#dc2626",
+        confirmButtonColor: "#a60505",
       });
       return;
     }
 
-    // ini hapus gtw ganti yg mana
-    fetch("https://dummyjson.com/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-        expiresInMins: 30,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-
-        if (data.token) {
-          localStorage.setItem("token", data.token);
-          Swal.fire({
-            icon: "success",
-            title: "Login Success",
-            text: "You will be redirected to dashboard",
-            showConfirmButton: false,
-            timer: 1500,
-          }).then(() => {
-            navigate("/dashboard");
-          });
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Login Failed",
-            text: data.message,
-          });
-        }
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: "error",
-          title: "Login Failed",
-          text: "An error occurred, please try again.",
-        });
-        console.error("Login error:", error);
+    // simulate login validation
+    if (email === mockUser.email && password === mockUser.password) {
+      Swal.fire({
+        icon: "success",
+        title: "Login Success",
+        text: "You will redirected to dashboard",
+        showConfirmButton: false,
+        timer: 1500,
+      }).then(() => {
+        localStorage.setItem("token", "fake-123-lee"); // simulated setting token
+        navigate("/dashboard"); // simulate navigation to dashboard
       });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text: "Invalid email or password. Please try again",
+      });
+    }
   }
 
   return (
@@ -123,3 +107,5 @@ export default function LoginForm() {
     </form>
   );
 }
+
+// tombol error tanda 'OK' warnanya abu2, benerin

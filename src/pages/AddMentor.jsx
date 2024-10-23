@@ -4,7 +4,7 @@ import FormMentor from "../component/ui/FormMentor";
 export default function AddMentor() {
   return (
     <section className="bg-[#F1FAFF]">
-      <div className="items-start">
+      <div className="items-start mb-10">
         <img src="/logo-blue.svg" alt="logo" />
       </div>
 
