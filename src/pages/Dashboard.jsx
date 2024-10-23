@@ -1,6 +1,7 @@
 import React from "react";
 import NavDash from "../component/blocks/NavDash";
 import MentorList from "../component/blocks/CardDashboard";
+import { Link } from "react-router-dom";
 
 export default function Dashboard({ image, name, univ, certificate, classes }) {
   // Data
@@ -50,13 +51,16 @@ export default function Dashboard({ image, name, univ, certificate, classes }) {
   ];
 
   return (
-    <section>
+    <section className="bg-[#F1FAFF]">
       <NavDash />
       <div className="ml-20 bg-[#222F49] flex w-36 items-start py-1 mt-5 px-3">
-        <img src="add.svg" alt="add" />
-        <p className="mt-1 text-white">Add Mentor</p>
+        <Link to="/addmentor" className="mt-1 flex text-white">
+          <img src="add.svg" alt="add" />
+          <p className="mt-1">Add Mentor</p>
+        </Link>
       </div>
-      <div className="min-h-screen container">
+
+      <div className="min-h-screen container ">
         <div className=" mx-auto flex flex-col items-center  bg-[#222F49] py-10">
           <MentorList />
         </div>

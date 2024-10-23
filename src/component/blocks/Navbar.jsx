@@ -15,12 +15,10 @@ export default function Navbar() {
   return (
     <nav className="bg-[#222F49]">
       <div className="container flex justify-between items-center text-white py-4">
-        {/* Logo */}
         <Link to="/">
           <img src="/logo-lingua.svg" alt="logo" className="h-8" />
         </Link>
 
-        {/* Hamburger/X Icon for Mobile */}
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isOpen ? (
@@ -37,7 +35,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu for Desktop */}
         <div className="hidden md:flex items-center gap-6">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
@@ -46,7 +43,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Collapsible Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-[#222F49] flex flex-col items-start gap-4 p-4 text-white">
           <Link to="/" onClick={toggleMenu}>Home</Link>

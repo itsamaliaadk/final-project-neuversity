@@ -20,8 +20,7 @@ export default function Price({
           <span className="text-lg ml-1">{duration}</span>
         </div>
 
-          <p className="container text-start mb-4">{description}</p>
-
+        <p className="text-start mb-4 mx-5">{description}</p>
 
         <div className="mx-5 my-4">
           <ul>

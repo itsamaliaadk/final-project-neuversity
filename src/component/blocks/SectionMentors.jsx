@@ -51,7 +51,7 @@ export default function SectionMentors() {
     <section className="container">
       <p className="font-bold text-4xl text-center py-10">Mentors at Lingua</p>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto  py-5  justify-center items-center text-sm">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto py-5 justify-center items-center text-sm">
         {data.map((item, index) => (
           <Mentors
             key={index}

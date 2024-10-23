@@ -5,7 +5,6 @@ export default function SectionContact() {
   return (
     <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 h-auto py-16 px-5 md:px-16">
       <div>
-        {/* sosmed + desc */}
         <p className="font-bold text-4xl">Let's Talk</p>
         <p className="my-5">
           If you have any questions or need more information, please feel free
@@ -18,12 +17,15 @@ export default function SectionContact() {
         <p className="font-bold mt-5">Socials</p>
 
         <div className="grid">
-          <a href="https://www.instagram.com/">Instagram</a>
-          <a href="https://www.whatsapp.com/">Whatsapp</a>
+          <a href="https://www.instagram.com/" className="underline">
+            Instagram
+          </a>
+          <a href="https://www.whatsapp.com/" className="underline">
+            Whatsapp
+          </a>
         </div>
       </div>
 
-      {/* form */}
       <Form />
     </div>
   );

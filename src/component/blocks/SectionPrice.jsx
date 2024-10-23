@@ -1,5 +1,4 @@
 import React from "react";
-//import ButtonProgram from "../ui/ButtonProgram";
 import Price from "../ui/Price.jsx";
 
 export default function SectionPrice() {

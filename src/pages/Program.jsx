@@ -1,5 +1,4 @@
 import React from "react";
-// import SectionProgram from "../component/blocks/SectionProgram";
 import Table from "../component/ui/Table";
 import SectionPrice from "../component/blocks/SectionPrice";
 
@@ -114,7 +113,6 @@ export default function Program() {
       <Table data={topikIData} />
       <Table data={topikIIData} />
       <Table data={englishClassData} />
-
       <SectionPrice />
     </div>
   );

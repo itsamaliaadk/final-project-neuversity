@@ -3,7 +3,7 @@ import ButtonEdit from "../ui/ButtonEdit";
 
 const MentorCard = ({ image, name, univ, certificate, classes }) => {
   return (
-    <div className=" w-80 px-5 mb-28">
+    <div className="w-80 px-5 mb-28">
       <div className="border-blue-950 p-3 bg-white rounded-lg border-2 border-solid">
         <img src={image} alt={name} className="w-full h-auto rounded-lg" />
         <p className="font-bold text-center text-2xl mb-2">
