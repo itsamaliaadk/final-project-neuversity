@@ -1,10 +1,8 @@
 import React from "react";
-import NavDash from "../component/blocks/NavDash";
 import MentorList from "../component/blocks/CardDashboard";
 import { Link } from "react-router-dom";
 
 export default function Dashboard({ image, name, univ, certificate, classes }) {
-  // Data
   const data = [
     {
       image: "/mentor1.jpg",
@@ -52,24 +50,18 @@ export default function Dashboard({ image, name, univ, certificate, classes }) {
 
   return (
     <section className="bg-[#F1FAFF]">
-      <NavDash />
-      <div className="ml-20 bg-[#222F49] flex w-36 items-start py-1 mt-5 px-3">
+      <div className="ml-20 bg-[#222F49] flex w-36 items-start py-1 px-3">
         <Link to="/addmentor" className="mt-1 flex text-white">
           <img src="add.svg" alt="add" />
           <p className="mt-1">Add Mentor</p>
         </Link>
       </div>
 
-      <div className="min-h-screen container ">
-        <div className=" mx-auto flex flex-col items-center  bg-[#222F49] py-10">
+      <div className="container pb-10">
+        <div className=" mx-auto flex flex-col items-center bg-[#222F49] py-10 mb-5">
           <MentorList />
         </div>
       </div>
-
-      <hr className="w-24 border-[#222F49] ml-4 pb-3 mt-7" />
-      <footer className="pl-5 pb-8">
-        <img src="/person.svg" className="h-20" alt="person" />
-      </footer>
     </section>
   );
 }

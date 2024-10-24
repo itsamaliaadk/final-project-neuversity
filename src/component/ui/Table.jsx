@@ -3,7 +3,7 @@ import React from "react";
 export default function Table({ data }) {
   return (
     <div className="container">
-      <table className="w-1/2 table-auto border-collapse text-left shadow-md rounded-lg my-5">
+      <table className="w-full table-auto border-collapse text-left shadow-md rounded-lg my-5">
         <thead>
           <tr className="bg-[#1E2538] text-center text-white">
             <th className="px-6 py-3 w-1/5">THE TH MEETING</th>

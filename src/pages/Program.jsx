@@ -105,19 +105,38 @@ export default function Program() {
         Lingua Flagship
         <br /> Program
       </p>
-      <Table data={hangulClassData} />
-      <Table data={korean1AData} />
-      <Table data={korean1BData} />
-      <Table data={korean2AData} />
-      <Table data={korean2BData} />
-      <Table data={topikIData} />
-      <Table data={topikIIData} />
-      <Table data={englishClassData} />
-      <SectionPrice />
+      <div className="grid grid-cols-2">
+        <div className="w-full">
+          <Table data={hangulClassData} className="items-end" />
+          <Table data={korean1AData} />
+          <Table data={korean1BData} />
+          <Table data={korean2AData} />
+          <Table data={korean2BData} />
+          <Table data={topikIData} />
+          <Table data={topikIIData} />
+          <Table data={englishClassData} />
+        </div>
+        <div>
+          <SectionPrice />
+        </div>
+      </div>
+
+      {/* contoh  */}
+      <div className="grid grid-cols-2">
+        <div>kiri</div>
+        <div>kanan</div>
+      </div>
+      <div className="grid grid-cols-2">
+        <div>kiri</div>
+        <div>kanan</div>
+      </div>
+      <div className="grid grid-cols-2">
+        <div>kiri</div>
+        <div>kanan</div>
+      </div>
     </div>
   );
 }
 
 // buat ui tabel terus dipaggin disini tp versi kanan kiri
-
 // halamannya

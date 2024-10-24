@@ -8,14 +8,14 @@ export default function Footer() {
   return (
     <section className="bg-[#222F49] text-white py-6">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <div>
+        <div className="flex items-center justify-between flex-col md:flex-row">
+          <div className="mb-4 md:mb-0">
             <Link to="/">
               <img src="/logo-lingua.svg" alt="logo" className="h-8" />
             </Link>
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex flex-col md:flex-row gap-6 md:mb-0">
             <Link to="/about">About Us</Link>
             <Link to="/program">Program</Link>
             <Link to="/contact">Contact</Link>
