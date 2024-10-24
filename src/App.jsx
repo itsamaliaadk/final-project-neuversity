@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import AddMentor from "./pages/AddMentor";
 import MainLayout from "./component/MainLayout";
 import AdminLayout from "./component/AdminLayout";
+import ProgramExample from "./pages/ProgramExample";
 
 export default function App() {
   return (
@@ -39,6 +40,16 @@ export default function App() {
             </MainLayout>
           }
         />
+
+        <Route
+          path="/program-example"
+          element={
+            <MainLayout>
+              <ProgramExample />
+            </MainLayout>
+          }
+        />
+
         <Route
           path="/contact"
           element={
@@ -58,22 +69,8 @@ export default function App() {
             </AdminLayout>
           }
         />
-        <Route
-          path="/login"
-          element={
-            <AdminLayout>
-              <Login />
-            </AdminLayout>
-          }
-        />
-        <Route
-          path="/addmentor"
-          element={
-            <AdminLayout>
-              <AddMentor />
-            </AdminLayout>
-          }
-        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/addmentor" element={<AddMentor />} />
       </Routes>
     </BrowserRouter>
   );

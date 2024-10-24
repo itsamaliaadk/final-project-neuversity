@@ -22,8 +22,12 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6">
-            <img src="/ig.svg" alt="ig" />
-            <img src="/wa.svg" alt="wa" />
+            <a href="https://www.instagram.com/" className="underline">
+              <img src="/ig.svg" alt="ig" />
+            </a>
+            <a href="https://www.whatsapp.com/" className="underline">
+              <img src="/wa.svg" alt="wa" />
+            </a>
           </div>
         </div>
 
