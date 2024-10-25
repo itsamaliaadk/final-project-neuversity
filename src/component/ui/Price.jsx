@@ -8,6 +8,7 @@ export default function Price({
   facility,
   buttonText,
 }) {
+  
   return (
     <div className="w-80 h-full p-5 ">
       <div className="bg-white rounded-xl py-5 shadow-lg">
