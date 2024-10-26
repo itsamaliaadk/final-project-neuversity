@@ -12,15 +12,19 @@ export default function SectionContact() {
           be happy to assist you.
         </p>
         <p className="font-bold">Email</p>
-        {/* link email / bukan? */}
+
         <p className="my-2">lingua@gmail.com</p>
         <p className="font-bold mt-5">Socials</p>
 
         <div className="grid">
-          <a href="https://www.instagram.com/" className="underline">
+          <a
+            href="https://www.instagram.com/"
+            className="underline"
+            target="_blank"
+          >
             Instagram
           </a>
-          <a href="https://www.whatsapp.com/" className="underline">
+          <a href="https://www.whatsapp.com/" className="underline"  target="_blank">
             Whatsapp
           </a>
         </div>
