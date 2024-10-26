@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function FormMentor() {
-  const [formData, setData] = useState({
+  const [formData, setFormData] = useState({
     fullname: "",
     university: "",
     certificate: "",
@@ -19,12 +18,12 @@ export default function FormMentor() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
+    // send form data to the server here
   };
-  // lakukan sesuatu dengan data form. kirim ke server
 
   return (
-    <section className="bg-white outline outline-gray-200 w-96 mx-auto rounded-lg">
-      <form className="p-5" onSubmit={handleSubmit}>
+    <section className="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg border border-blue-950">
+      <form onSubmit={handleSubmit}>
         <div className="mb-5">
           <label htmlFor="fullname" className="block mb-2 text-lg font-medium">
             Fullname
@@ -70,7 +69,7 @@ export default function FormMentor() {
             value={formData.certificate}
             onChange={handleChange}
           >
-            <option selected="">Choose the language certificate</option>
+            <option value="">Choose the language certificate</option>
             <option value="TOPIK1">TOPIK I</option>
             <option value="TOPIK2">TOPIK II</option>
             <option value="TOEFL">TOEFL</option>
@@ -89,7 +88,7 @@ export default function FormMentor() {
             value={formData.courses}
             onChange={handleChange}
           >
-            <option selected="">Choose the program</option>
+            <option value="">Choose the program</option>
             <option value="HC">Hangeul Class</option>
             <option value="1A">Korean Class 1A</option>
             <option value="1B">Korean Class 1B</option>
@@ -100,16 +99,24 @@ export default function FormMentor() {
           </select>
         </div>
 
-        <div className="mt-10 pb-3 flex justify-center gap-10">
+        <div className="mt-10 pb-3 flex flex-col md:flex-row justify-center gap-4">
           <button
             type="reset"
-            className="outline outline-[#222F49] text-[#222F49] p-2 px-10 rounded-lg"
+            className="outline outline-[#222F49] text-[#222F49] p-2 px-6 rounded-lg"
+            onClick={() =>
+              setFormData({
+                fullname: "",
+                university: "",
+                certificate: "",
+                courses: "",
+              })
+            }
           >
             Reset
           </button>
           <button
             type="submit"
-            className="bg-[#222F49] text-white p-2 px-10 rounded-lg hover:bg-blue-900"
+            className="bg-[#222F49] text-white p-2 px-6 rounded-lg hover:bg-blue-900"
           >
             Submit
           </button>

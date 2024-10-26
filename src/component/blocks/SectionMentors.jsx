@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Mentors from "../ui/Mentors";
 
 export default function SectionMentors() {
@@ -47,20 +49,26 @@ export default function SectionMentors() {
     },
   ];
 
+  // Initialize AOS animations
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
   return (
     <section className="container">
       <p className="font-bold text-4xl text-center py-10">Mentors at Lingua</p>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto py-5 justify-center items-center text-sm">
+      <div className="mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-6">
         {data.map((item, index) => (
-          <Mentors
-            key={index}
-            image={item.image}
-            name={item.name}
-            univ={item.univ}
-            certificate={item.certificate}
-            classes={item.classes}
-          />
+          <div key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+            <Mentors
+              image={item.image}
+              name={item.name}
+              univ={item.univ}
+              certificate={item.certificate}
+              classes={item.classes}
+            />
+          </div>
         ))}
       </div>
     </section>

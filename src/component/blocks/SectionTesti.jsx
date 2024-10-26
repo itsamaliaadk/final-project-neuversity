@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Testi from "../ui/Testi";
 
 export default function SectionTesti() {
@@ -8,7 +10,7 @@ export default function SectionTesti() {
       nama: "Meisy M.",
       icons: "/star.svg",
       deskripsi:
-        "Learning Korean here is so much fun! The tutors are friendly and always motivate me. I also like the learning method, it's not boring when learning. Now, I can speak Korean for everyday sentences. Here, I can also exchange ideskripsias with mentors because they are also scholarship awardee in Korea and I can ask them to give me advice on my essay.",
+        "Learning Korean here is so much fun! The tutors are friendly and always motivate me. I also like the learning method, it's not boring when learning. Now, I can speak Korean for everyday sentences. Here, I can also exchange ideas with mentors because they are also scholarship awardees in Korea and I can ask them to give me advice on my essay.",
     },
     {
       foto: "/mentor3.jpg",
@@ -26,21 +28,27 @@ export default function SectionTesti() {
     },
   ];
 
+  // Initialize AOS animations
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
   return (
     <section>
       <p className="font-bold text-4xl text-center py-10">
         What Our Students Say
       </p>
 
-      <div className="mx-auto px-20 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-wrap justify-center items-stretch">
+      <div className="mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 py-10 justify-center items-stretch gap-6">
         {data.map((item, index) => (
-          <Testi
-            key={index}
-            foto={item.foto}
-            nama={item.nama}
-            icons={item.icons}
-            deskripsi={item.deskripsi}
-          />
+          <div key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+            <Testi
+              foto={item.foto}
+              nama={item.nama}
+              icons={item.icons}
+              deskripsi={item.deskripsi}
+            />
+          </div>
         ))}
       </div>
     </section>

@@ -3,9 +3,9 @@ import FormMentor from "../component/ui/FormMentor";
 
 export default function AddMentor() {
   return (
-    <section className="bg-[#F1FAFF]">
-      <div className="items-start mb-10">
-        <img src="/logo-blue.svg" alt="logo" />
+    <section className="bg-[#F1FAFF] min-h-screen">
+      <div className="flex justify-start pt-3 pb-10 ml-3">
+        <img src="/logo-blue.svg" alt="logo" className="h-10" />
       </div>
 
       <div className="container">
@@ -15,7 +15,7 @@ export default function AddMentor() {
         </p>
       </div>
 
-      <div className="py-10">
+      <div className="flex items-center justify-center min-h-screen ">
         <FormMentor />
       </div>
     </section>

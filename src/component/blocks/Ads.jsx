@@ -3,7 +3,7 @@ import React from "react";
 export default function Ads() {
   return (
     <div className="container pt-5 pb-32">
-      <div className="bg-[#5C95D5] grid grid-cols-1 md:grid-cols-2 p-10 text-white rounded-3xl">
+      <div className="bg-[#5C95D5] grid grid-cols-1 md:grid-cols-2 gap-4 p-10 text-white rounded-3xl">
         <div>
           <p className="font-bold text-3xl">
             Having trouble <br />
@@ -25,7 +25,7 @@ export default function Ads() {
           </button>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center ">
           <img src="/mentoring.jpg" className="rounded-lg" alt="mentoring" />
         </div>
       </div>

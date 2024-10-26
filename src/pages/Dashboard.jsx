@@ -49,17 +49,19 @@ export default function Dashboard({ image, name, univ, certificate, classes }) {
   ];
 
   return (
-    <section className="bg-[#F1FAFF]">
-      <div className="ml-20 bg-[#222F49] flex w-36 items-start py-1 px-3">
-        <Link to="/addmentor" className="mt-1 flex text-white">
-          <img src="add.svg" alt="add" />
-          <p className="mt-1">Add Mentor</p>
-        </Link>
-      </div>
+    <section className="bg-[#F1FAFF]  ">
+      <div className="container">
+        <div className=" bg-[#222F49] flex w-36 items-start py-1 px-3">
+          <Link to="/addmentor" className="mt-1  flex text-white">
+            <img src="add.svg" alt="add" />
+            <p className="mt-1">Add Mentor</p>
+          </Link>
+        </div>
 
-      <div className="container pb-10">
-        <div className=" mx-auto flex flex-col items-center bg-[#222F49] py-10 mb-5">
-          <MentorList />
+        <div className=" pb-10">
+          <div className="flex flex-col justify-center items-center px-5 bg-[#222F49] py-10 mb-5">
+            <MentorList />
+          </div>
         </div>
       </div>
     </section>

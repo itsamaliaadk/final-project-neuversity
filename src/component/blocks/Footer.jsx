@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import About from "../../pages/About";
-import Program from "../../pages/Program";
 import Contact from "../../pages/Contact";
 
 export default function Footer() {

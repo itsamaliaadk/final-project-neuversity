@@ -23,7 +23,7 @@ export default function LoginForm() {
         icon: "error",
         title: "Email and Password Required",
         text: "Email and Password cannot be empty",
-        confirmButtonColor: "#a60505",
+        confirmButtonColor: "#222F49",
       });
       return;
     }
@@ -38,25 +38,23 @@ export default function LoginForm() {
         timer: 1500,
       }).then(() => {
         localStorage.setItem("token", "fake-123-lee"); // simulated setting token
-        navigate("/dashboard"); // simulate navigation to dashboard
+        navigate("/admin"); // simulate navigation to dashboard
       });
     } else {
       Swal.fire({
         icon: "error",
         title: "Login Failed",
         text: "Invalid email or password. Please try again",
+        confirmButtonColor: "#222F49",
       });
     }
   }
 
   return (
-    <form
-      onSubmit={handleLogin}
-      className="bg-white rounded-xl border border-blue-900 space-y-4 w-96 h-96"
-    >
+    <form onSubmit={handleLogin}>
       <p className="text-center text-3xl font-bold mt-5">Login</p>
 
-      <div className="flex flex-col px-10 pt-3">
+      <div className="flex flex-col  pt-3">
         <label htmlFor="email" className="block mb-2 text-sm font-medium">
           Email
         </label>
@@ -72,7 +70,7 @@ export default function LoginForm() {
         />
       </div>
 
-      <div className="flex flex-col px-10 pt-5">
+      <div className="flex flex-col  pt-5">
         <label htmlFor="password" className="block mb-2 text-sm font-medium">
           Password
         </label>
@@ -100,12 +98,10 @@ export default function LoginForm() {
 
       <button
         type="submit"
-        className="text-white bg-[#2D446E] hover:bg-blue-950 font-medium rounded-lg sm:w-auto px-32 py-2.5 text-center m-12"
+        className="text-white my-4 bg-[#2D446E] hover:bg-blue-950 font-medium rounded-lg  w-full py-2.5 text-center "
       >
         Login
       </button>
     </form>
   );
 }
-
-// tombol error tanda 'OK' warnanya abu2, benerin

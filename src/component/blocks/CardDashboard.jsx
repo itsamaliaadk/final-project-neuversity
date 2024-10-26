@@ -85,8 +85,8 @@ const MentorList = () => {
 
   return (
     <>
-      <div>
-        <div className="grid grid-cols-3 justify-center">
+      <div className="justify-center">
+        <div className=" py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-center items-stretch">
           {data.map((mentor, index) => (
             <MentorCard
               key={index}

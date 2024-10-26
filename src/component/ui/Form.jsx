@@ -1,5 +1,4 @@
 import React from "react";
-import ButtonProgram from "./ButtonProgram";
 
 export default function Form() {
   return (
@@ -75,16 +74,11 @@ export default function Form() {
 
         <button
           type="submit"
-          className="text-white bg-[#2D446E] hover:bg-blue-950 font-medium rounded-lg text-sm w-full sm:w-auto px-40 py-2.5 text-center mt-5"
+          className="text-white bg-[#2D446E] hover:bg-blue-950 font-medium rounded-lg text-sm w-full   py-2.5 text-center mt-5"
         >
           Send
         </button>
       </form>
-
-      {/* <ButtonProgram /> */}
     </section>
   );
 }
-
-// kok yg fullname sm email jd biru kalo diisi itu gmn caranya / knp bisa
-// kurang ke kanan lg formnya / dilebarin lg aja tp blm bisa kmrn

@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Choose from "../ui/Choose";
 
 export default function SectionChoose() {
@@ -32,38 +34,46 @@ export default function SectionChoose() {
 
   const [isExpanded, setIsExpanded] = useState(false);
 
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   };
 
   return (
     <section className="container mx-auto px-4">
-      <p className="font-bold text-4xl text-center py-10 ">
+      <p className="font-bold text-4xl text-center py-10" data-aos="fade-up">
         Why Choose Lingua?
       </p>
 
       {/* Desktop Layout */}
       <div className="container hidden lg:grid lg:grid-cols-3 gap-6 py-10">
-        <Choose title={data[0].title} description={data[0].description} />
-        <Choose title={data[1].title} description={data[1].description} />
-        <Choose title={data[2].title} description={data[2].description} />
-
-        <Choose
-          title={data[3].title}
-          description={data[3].description}
-          className=""
-        />
-        <Choose title={data[4].title} description={data[4].description} />
+        {data.slice(0, 3).map((item, index) => (
+          <div key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+            <Choose title={item.title} description={item.description} />
+          </div>
+        ))}
+        <div className="container mx-auto flex col-span-3 lg:px-48 gap-6 px-40">
+          {data.slice(3, 5).map((item, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={`${(index + 3) * 100}`}
+            >
+              <Choose title={item.title} description={item.description} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Medium and Small Screen Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-10 lg:hidden">
         {data.slice(0, isExpanded ? data.length : 4).map((item, index) => (
-          <Choose
-            key={index}
-            title={item.title}
-            description={item.description}
-          />
+          <div key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+            <Choose title={item.title} description={item.description} />
+          </div>
         ))}
       </div>
 
@@ -76,6 +86,3 @@ export default function SectionChoose() {
     </section>
   );
 }
-
-// animate__pulse
-// https://animate.style/#usage

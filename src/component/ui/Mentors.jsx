@@ -3,7 +3,7 @@ export default function Mentors({ image, name, univ, certificate, classes }) {
     <div className="w-80 px-5 mb-28 hover:scale-105 transition-transform duration-[0.3s]">
       <div className="border-blue-950 p-3 bg-white rounded-lg border-2 border-solid">
         <img src={image} alt="" />
-        <p className="font-bold text-center text-2xl mb-2">
+        <p className="font-bold text-center text-2xl my-2">
           {name ? name : "kosong"}
         </p>
         <p className="w-44 mx-auto text-center ">{univ}</p>
