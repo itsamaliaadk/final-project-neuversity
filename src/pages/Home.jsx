@@ -7,7 +7,6 @@ import SectionMentors from "../component/blocks/SectionMentors";
 export default function Home() {
   return (
     <div className="bg-[#F1FAFF]">
-      {/* pemanggilan konten2 dari component */}
       <SectionHero />
       <SectionChoose />
       <SectionMentors />

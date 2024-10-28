@@ -13,7 +13,7 @@ export default function SectionContact() {
         </p>
         <p className="font-bold">Email</p>
 
-        <p className="my-2">lingua@gmail.com</p>
+        <p className="my-2 underline">lingua@gmail.com</p>
         <p className="font-bold mt-5">Socials</p>
 
         <div className="grid">
@@ -24,7 +24,11 @@ export default function SectionContact() {
           >
             Instagram
           </a>
-          <a href="https://www.whatsapp.com/" className="underline"  target="_blank">
+          <a
+            href="https://www.whatsapp.com/"
+            className="underline"
+            target="_blank"
+          >
             Whatsapp
           </a>
         </div>

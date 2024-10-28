@@ -40,16 +40,28 @@ export default function SectionTesti() {
       </p>
 
       <div className="mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 py-10 justify-center items-stretch gap-6">
-        {data.map((item, index) => (
-          <div key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
-            <Testi
-              foto={item.foto}
-              nama={item.nama}
-              icons={item.icons}
-              deskripsi={item.deskripsi}
-            />
-          </div>
-        ))}
+        {data.map((item, index) => {
+          // Apply different animations based on card position (left, center, right)
+          const aosType = index === 1 ? "fade-up" : "fade-down";
+          const aosDuration = index === 1 ? "3000" : "1500";
+          const aosEasing = index !== 1 ? "linear" : undefined;
+
+          return (
+            <div
+              key={index}
+              data-aos={aosType}
+              data-aos-duration={aosDuration}
+              data-aos-easing={aosEasing}
+            >
+              <Testi
+                foto={item.foto}
+                nama={item.nama}
+                icons={item.icons}
+                deskripsi={item.deskripsi}
+              />
+            </div>
+          );
+        })}
       </div>
     </section>
   );
