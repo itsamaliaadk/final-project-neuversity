@@ -15,7 +15,7 @@ export default function Testi({ foto, nama, icons, deskripsi }) {
           className="rounded-full h-28 w-28 object-cover overflow-hidden"
           alt="foto"
         />
-        <p className="mt-5">{nama ? nama : "kosong"}</p>
+        <p className="mt-5 font-bold">{nama ? nama : "kosong"}</p>
         <img src={icons} className="my-4" alt="stars" />
         <p className={`${isExpanded ? "" : "line-clamp-4"} transition-all`}>
           {deskripsi}
